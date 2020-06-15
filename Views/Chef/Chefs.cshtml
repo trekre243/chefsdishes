@@ -1,0 +1,36 @@
+@model List<HomeChef>
+
+<div class="row">
+    <div class="col s12 center-align">
+        <h3>Chefs | <a href="/dishes">Dishes</a></h3>
+    </div>
+</div>
+<div class="row">
+    <div class="col s12 right-align">
+        <a href="/new">Add a chef</a>
+    </div>
+</div>
+<div class="row">
+    <div class="col s12">
+        <h4>Check out our roster of Chefs!</h4>
+    </div>
+</div>
+<table class="striped">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th># of Dishes</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var chef in Model)
+        {
+            <tr>
+                <td>@chef.Name</td>
+                <td>@chef.Age</td>
+                <td>@chef.NumDishes</td>
+            </tr>
+        }
+    </tbody>
+</table>
